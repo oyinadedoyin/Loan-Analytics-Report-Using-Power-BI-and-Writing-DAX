@@ -5,7 +5,7 @@
 Certainly! Here's the updated table of contents with the additional headings "Key Features" and "ETL Process":
 
 ## Table of Contents
-
+---
 - [Overview](#overview)
 - [Report Structure](#report-structure)
 - [Key Features](#key-features)
@@ -24,7 +24,7 @@ The report comprises five distinct pages:
 4. **Students Review**: Analyzes loan trends year-over-year, and by students, comparing total loans taken out.
 5. **Details (Hidden Page)**: Allows drill-through functionality to search through to specific loan details.
 
- ### Key Features
+### Key Features
 ---
 - **Data Source Integration**: This report seamlessly integrates data from Dataverse, sourced from our Loans Manager Model-Driven App, providing real-time insights linked directly to our report.
 - **Interactive Filters**: The Filters page empowers users to tailor data views according to specific criteria, enhancing the relevance of information displayed on other screens.
