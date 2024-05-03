@@ -2,6 +2,15 @@
 
 ![janko-ferlic-sfL_QOnmy00-unsplash](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/d2080578-2f16-4e6f-962f-5aee18a469e3)
 
+Certainly! Here's the updated table of contents with the additional headings "Key Features" and "ETL Process":
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Report Structure](#report-structure)
+- [Key Features](#key-features)
+- [ETL Process](#etl-process)
+
 ### Overview
 ---
 This project offers comprehensive insights into school library loan analytics, enabling users to manipulate data views and drill down to specific details through interactive reporting leveraging Microsoft Power BI and DAX functionalities.
