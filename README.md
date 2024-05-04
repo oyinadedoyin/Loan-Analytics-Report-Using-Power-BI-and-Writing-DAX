@@ -174,3 +174,68 @@ To implement filters effectively, I used slicers and synchronized them across mu
 
 ![pbi_sync_slicers](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/f6805637-428d-4c5e-be85-104ec65d9372)
 ![pbi_Filters2](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/d9fa2750-871c-4261-a712-ef5e4eb8fb86)
+
+### Introducing a Drillthrough Page to Enhancing Report Navigation
+---
+The incorporation of drillthrough pages in Power BI enriches the user experience by facilitating seamless navigation from a parent record to a child record on another page. This functionality empowers users to delve deeper into specific data subsets and extract actionable insights with ease.
+
+To implement a drillthrough page, several steps were undertaken:
+
+1. **Selection of Drillthrough Fields:** The process commenced by selecting key fields, including Students Full Name, Month, School Year, and Book Name, and adding them to the 'Add drillthrough fields' section in the visualizations pane. These fields serve as pivotal elements for navigating from the parent record to the child record.
+![pbi_drillthrough](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/0b4c89fb-8250-409d-8d8f-d7ff617b7a0e)
+
+2. **Creation of Drillthrough Report Header:** A crucial component of the drillthrough page is the header, which provides contextual information and enhances user understanding. To achieve this, the Drillthrough report header was inserted into a card visual, enabling users to click on a student and seamlessly transition to a detailed view of the loans they have taken.
+
+3. **Integration of Filtering Attributes:** To further enhance the functionality of the drillthrough page, the report header was modified to reflect filtering attributes such as date and school year. 
+
+
+```DAX
+Report Header Drillthrough =
+    "Drillthrough" &
+    IF (
+        HASONEVALUE ( Student[Full Name] ),
+        " -" & VALUES ( Student[Full Name] ),
+        ""
+    ) &
+    IF (
+        HASONEVALUE ( dimDate[Month] ),
+        " " & VALUES ( dimDate[Month] ),
+        ""
+    ) &
+    IF (
+        HASONEVALUE ( dimDate[SchoolYear] ),
+        " " & VALUES ( dimDate[SchoolYear] ),
+        ""
+    )
+```
+Drillthrough page showing the report header
+![pbi_drillthrough_Maria](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/78565b08-ee13-4be2-aa15-e2e6327a036a)
+
+### Setting up Loan Reminder Email Column with DAX
+
+In this section, a DAX expression was configured to generate loan reminder emails for overdue items. The DAX expression is as follows:
+
+```DAX
+Loans Reminder Email =
+    "mailto:" & RELATED(Student[Email]) & // Pulls email address from related table
+    "?subject=" & 
+    "You have an outstanding loan for " & Loans[pu_bookname] &
+    "&body=" & 
+    "Please be advised that the due date for the book was " & Loans[Date Due] & " and it is currently " & Loans[Days Overdue] & " day(s) overdue"
+```
+
+This DAX expression constructs a mailto link, incorporating the following components:
+
+- **Recipient Email**: Pulls the email address from the related Student table using the RELATED function.
+- **Email Subject**: Specifies the subject line for the email, indicating the outstanding loan details.
+- **Email Body**: Provides a message body detailing the loan status, including the book name, due date, and number of days overdue.
+
+Additionally, the calculation for the 'Days Overdue' field is defined as follows:
+
+```DAX
+Days Overdue = IF( Loans[pu_isoverdue] = FALSE(), 0, TODAY() - Loans[Date Due] )
+```
+
+This DAX expression calculates the number of days an item is overdue based on the difference between the current date (TODAY()) and the due date specified in the 'Date Due' column.
+
+By implementing these DAX expressions, loan reminder emails for overdue items can easily be generated, streamlining communication and facilitating timely action.
