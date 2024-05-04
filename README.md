@@ -14,6 +14,7 @@
 - [Implementing Filters: Enhancing Data Exploration and User Experience](#implementing-filters-enhancing-data-exploration-and-user-experience)
 - [Introducing a Drillthrough Page to Enhancing Report Navigation](#introducing-a-drillthrough-page-to-enhancing-report-navigation)
 - [Setting up Loan Reminder Email Column with DAX](#setting-up-loan-reminder-email-column-with-dax)
+- [Model-Driven App Navigation Column](#model-driven-app-navigation-column)
 
 
 ## Overview
@@ -269,5 +270,11 @@ By implementing these DAX expressions, loan reminder emails for overdue items ca
 ---
 
 ![pbi_loanEmail_icon](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/6bdcfd88-2cf1-4437-8609-cdcfdd026305)
+
+## Model-Driven App Navigation Column
+
+Users can seamlessly navigate to the corresponding records in the Loans Manager Model-Driven App to make necessary changes or updates through the URL_Model_Driven column.
+
+![pbi_modeDriven_icon](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4cd4211b-0cce-4bae-a33f-cfd3fd284076)
 
 
