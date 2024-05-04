@@ -36,7 +36,7 @@ The report comprises five distinct pages:
 4. **Students Review**: Analyzes loan trends year-over-year, and by students, comparing total loans taken out.
 5. **Details (Hidden Page)**: Allows drill-through functionality to search through to specific loan details.
 
-  ![pbi_all_pages](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/005caaad-36c8-44c4-8062-4977b277ce2c)
+![pbi_all_pages](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/005caaad-36c8-44c4-8062-4977b277ce2c)
 
 ## Key Features
 
