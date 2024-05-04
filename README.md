@@ -295,6 +295,8 @@ By implementing these recommendations, the school can enhance the efficiency, ef
 ## Conclusion
 
 This provides a comprehensive analysis of the school's library loan system, shedding light on the intricacies of loan management and student engagement. Through the examination of loan data and user interactions, we are able to uncovered key insights into borrowing trends, overdue items, and user behaviors. The findings outlined in this report serve as a roadmap for enhancing the efficiency and effectiveness of the school library loan system. By identifying areas of improvement such as overdue item notifications and user communication channels, we can streamline loan processes and improve user satisfaction. In essence, this report underscores the importance of efficient loan management in promoting academic success and fostering a positive learning environment. 
+
+
 ---
 
 Thank you for taking the time to explore this project. Your interest and attention are truly appreciated.
