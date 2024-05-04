@@ -18,6 +18,10 @@
 - [Recommendations](#recommendations)
 - [Conclusion](#conclusion)
 
+## Tools
+
+Microsoft Power BI, Power Query, Power Apps, Power Automate
+
 ## Overview
 
 This project offers comprehensive insights into school library loan analytics, enabling users to manipulate data views and drill down to specific details through interactive reporting leveraging Microsoft Power BI and DAX functionalities.
