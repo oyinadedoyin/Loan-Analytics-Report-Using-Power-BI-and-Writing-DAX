@@ -104,6 +104,12 @@ This DAX code is used to create two calculated columns: "SchoolYear" and "School
 
 By using these calculated columns, this reporting can easily align with the academic calendar of the school in the UK, making it possible to track and analyze academic data or events in a manner that reflects the timing and structure of the UK academic year, from September through to August.
 
+### Data Modeling
+---
+Created a star schema data model to establish table relationships between student, loans, dimension date tables. Utilizing DAX, this schema ensures efficient data management and optimized query performance for enhanced reporting capabilities. All relationships are one-to-many, ensuring accurate data aggregation and analysis.
+
+![pbi_data_modelling](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/9c373804-89a5-4d55-937b-c433c10f7f66)
+
 Add Measures to Report using DAX
 ---
 To enhance data analysis and visualization capabilities, measures were incorporated into the report using DAX (Data Analysis Expressions). These measures aggregate data from various columns and perform calculations across multiple tables, enabling comprehensive insights into key metrics such as total loans last year.
