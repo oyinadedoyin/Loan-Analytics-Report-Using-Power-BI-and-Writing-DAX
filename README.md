@@ -51,6 +51,10 @@ The report comprises five distinct pages:
 - **Data Transformation**: Implements Power Query for data transformations, including data type changes, column removal, value replacements, and creation of new columns.
 - **Data Linkage**: Establishes relationships between tables, enabling seamless navigation and integration of related data, such as book names and authors.
 
+**Data Transformation in Power Query
+---
+![pbi_dataTransformation_PowerQuery](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ccb4a545-f1cb-4e77-9c2e-6effb8ec8542)
+
 ### Create Date Dimension table (dimDate) using DAX
 ---
 By creating the Date Dimension table, we can effortlessly create custom calendars tailored to our specific needs, such as the Academic Year calendar crucial for this project's context. More generally, it facilitates streamlined filtering of organization-based attributes like week numbers and half-years, enhancing the precision and efficiency of our analyses. One of the table's most significant advantages lies in its ability to support historical comparisons and trend analyses. Through its comprehensive temporal framework, we can accurately calculate metrics such as sales figures from the previous year and percentage changes year on year, empowering us with invaluable insights into business performance and trends.
@@ -260,3 +264,10 @@ Days Overdue = IF( Loans[pu_isoverdue] = FALSE(), 0, TODAY() - Loans[Date Due] )
 This DAX expression calculates the number of days an item is overdue based on the difference between the current date (TODAY()) and the due date specified in the 'Date Due' column.
 
 By implementing these DAX expressions, loan reminder emails for overdue items can easily be generated, streamlining communication and facilitating timely action.
+
+**Loans Email Column**
+---
+
+![pbi_loanEmail_icon](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/6bdcfd88-2cf1-4437-8609-cdcfdd026305)
+
+
