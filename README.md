@@ -16,11 +16,11 @@
 - [Setting up Loan Reminder Email Column with DAX](#setting-up-loan-reminder-email-column-with-dax)
 
 
-### Overview
+## Overview
 ---
 This project offers comprehensive insights into school library loan analytics, enabling users to manipulate data views and drill down to specific details through interactive reporting leveraging Microsoft Power BI and DAX functionalities.
 
-### Report Structure
+## Report Structure
 ---
 The report comprises five distinct pages:
 1. **Landing Page**: Provides an overview and navigation to other sections.
@@ -31,7 +31,7 @@ The report comprises five distinct pages:
 
   ![pbi_all_pages](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/005caaad-36c8-44c4-8062-4977b277ce2c)
 
-### Key Features
+## Key Features
 ---
 - **Data Source Integration**: This report seamlessly integrates data from Dataverse, sourced from our Loans Manager Model-Driven App, providing real-time insights linked directly to our report.
 - **Interactive Filters**: The Filters page empowers users to tailor data views according to specific criteria, enhancing the relevance of information displayed on other screens.
@@ -45,13 +45,13 @@ The report comprises five distinct pages:
 
 ![pbi_students_review](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/a3bedce1-086f-48e9-8e56-9ca0bccec4b8)
 
-### ETL Process
+## ETL Process
 ---
 - **Data Extraction**: Utilizes Microsoft Power BI to extract data from Dataverse, importing tables for students and loans.
 - **Data Transformation**: Implements Power Query for data transformations, including data type changes, column removal, value replacements, and creation of new columns.
 - **Data Linkage**: Establishes relationships between tables, enabling seamless navigation and integration of related data, such as book names and authors.
 
-**Data Transformation in Power Query
+**Data Transformation in Power Query**
 ---
 ![pbi_dataTransformation_PowerQuery](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ccb4a545-f1cb-4e77-9c2e-6effb8ec8542)
 
