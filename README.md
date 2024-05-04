@@ -43,6 +43,8 @@ The report comprises five distinct pages:
 - **Date Dimension Table Creation**: Implemented a Date Dimension table using DAX to enrich time-based analysis and reporting, enhancing insights into loan trends over different time periods.
 - **Star Schema Data Modeling**: Created a star schema data model to establish table relationships between student, loans, dimension date tables. Utilizing DAX, this schema ensures efficient data management and optimized query performance for enhanced reporting capabilities. All relationships are one-to-many, ensuring accurate data aggregation and analysis.
 
+![pbi_students_review](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/a3bedce1-086f-48e9-8e56-9ca0bccec4b8)
+
 ### ETL Process
 ---
 - **Data Extraction**: Utilizes Microsoft Power BI to extract data from Dataverse, importing tables for students and loans.
