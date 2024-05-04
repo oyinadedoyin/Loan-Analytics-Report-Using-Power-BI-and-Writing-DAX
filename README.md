@@ -153,7 +153,7 @@ Report Header 1 = "Drillthrough -" & IF(HASONEVALUE(Student[Full Name]), VALUES(
 
 ```
 **Measures**
-
+---
 ![pbi_measure_datapane](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ee84cfb1-0cb9-4ff7-843f-fba1705aed11)
 
 ![pbi_measures](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4422ce87-68a3-460b-8d2c-2dacc9da4cbc)
@@ -228,7 +228,8 @@ Report Header Drillthrough =
         ""
     )
 ```
-Drillthrough page showing the report header
+**Drillthrough page showing the report header**
+---
 ![pbi_drillthrough_Maria](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/78565b08-ee13-4be2-aa15-e2e6327a036a)
 
 ### Setting up Loan Reminder Email Column with DAX
