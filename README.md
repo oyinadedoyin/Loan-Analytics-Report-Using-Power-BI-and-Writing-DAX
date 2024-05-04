@@ -220,7 +220,7 @@ Drillthrough page showing the report header
 ![pbi_drillthrough_Maria](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/78565b08-ee13-4be2-aa15-e2e6327a036a)
 
 ### Setting up Loan Reminder Email Column with DAX
-
+---
 In this section, a DAX expression was configured to generate loan reminder emails for overdue items. The DAX expression is as follows:
 
 ```DAX
