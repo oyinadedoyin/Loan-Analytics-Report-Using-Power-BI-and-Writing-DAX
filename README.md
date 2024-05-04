@@ -94,3 +94,83 @@ This DAX code is used to create two calculated columns: "SchoolYear" and "School
 
 By using these calculated columns, this reporting can easily align with the academic calendar of the school in the UK, making it possible to track and analyze academic data or events in a manner that reflects the timing and structure of the UK academic year, from September through to August.
 
+Add Measures to Report using DAX
+---
+To enhance data analysis and visualization capabilities, measures were incorporated into the report using DAX (Data Analysis Expressions). These measures aggregate data from various columns and perform calculations across multiple tables, enabling comprehensive insights into key metrics such as total loans last year.
+
+Measures created within the report's visualizations include:
+
+- **Total overdue loans**
+- **Total days on loan**
+- **Percentage change year on year**
+- **Dynamic report header** (a text-based measure)
+
+While measures can be created within existing tables in the report, such as the students table, a separate table named 'My Measures' was created for ease of management. This approach simplifies measure creation and organization. To accomplish this, an empty table named 'My Measures' was generated using the 'Enter Data' option from the Home tab, providing a centralized location for managing and accessing all measures within the report.
+
+To create the first measure - Total loans, right click on the my measures table table and select new measure.
+```
+Total Loans = COUNTROWS(Loans)
+```
+Total Overdue Loans
+```
+Total Overdue Loans = CALCULATE([Total Loans], Loans[pu_isoverdue] = true() )
+```
+Total Loans Last Year (LY)
+```
+Total Loans LY = Calculate ([Total Loans], SAMEPERIODLASTYEAR(dimDate[Date]))
+```
+Change Year on Year (YOY)
+```
+Change YOY = [Total Loans] - [Total Loans LY]
+```
+Percentage Change Year on Year 
+```
+% Change YOY = Divide (Change YOY], [Total Loans LY])
+```
+Total Days on Loan
+```
+Total Days on Loan = sum(Loans[Total Days on Loan]
+```
+Report Header
+```
+Report Header 1 = "Loans Reporting -" & IF(HASONEVALUE(Student[Full Name]), VALUES(Student[Full Name]),"")
+```
+![pbi_measure_datapane](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ee84cfb1-0cb9-4ff7-843f-fba1705aed11)
+
+![pbi_measures](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4422ce87-68a3-460b-8d2c-2dacc9da4cbc)
+
+Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan**
+---
+In this section, DAX was employed to create a new column within the Loans table, specifically aimed at calculating the total number of days each loan remained outstanding. The formula utilized for this purpose is as follows:
+
+```DAX
+Total Days on Loan = IF(
+    ISBLANK(Loans[Date Returned]),
+    TODAY() - Loans[Date Loan Start],
+    Loans[Date Returned] - Loans[Date Loan Start]
+)
+```
+
+This DAX expression incorporates conditional logic to determine the total days on loan for each entry in the Loans table. If the 'Date Returned' column is blank (indicating that the loan is still outstanding), the formula calculates the difference between the current date (TODAY()) and the 'Date Loan Start' column, representing the total days the loan has been active.
+
+Conversely, if the 'Date Returned' column contains a date value (indicating that the loan has been returned), the formula calculates the difference between the 'Date Returned' and 'Date Loan Start' columns, representing the total duration of the loan.
+
+By leveraging DAX to create this calculated column, users can efficiently track and analyze the duration of loans within the Loans table, facilitating comprehensive loan management and analysis.
+
+
+**Implementing Filters: Enhancing Data Exploration and User Experience**
+
+Incorporating filters into the report provides numerous benefits aimed at optimizing data exploration and improving user experience. By adding filters, users can effectively narrow down the dataset, allowing for more focused analysis and interrogation of specific data subsets. This not only streamlines the analytical process but also ensures that users only view the data relevant to their needs, minimizing cognitive load and enhancing overall comprehension.
+
+Key benefits of adding filters include:
+
+- **Dataset Size Reduction:** Filters enable users to refine the dataset, eliminating unnecessary data points and reducing the overall size of the dataset. This streamlined approach enhances data processing efficiency and expedites analytical workflows.
+
+- **Facilitated Data Interrogation:** Filters empower users to interactively explore the data, enabling them to drill down into specific data subsets and uncover actionable insights. This dynamic interrogation capability fosters a deeper understanding of the data and facilitates informed decision-making.
+
+- **Tailored Data Visibility:** By applying filters, users can tailor the visibility of data to meet their specific requirements, ensuring they only see the data relevant to their analysis. This customization enhances user satisfaction and promotes efficient data utilization.
+
+To implement filters effectively, I used slicers and synchronized them across multiple pages of the report by accessing the View tab and selecting the 'Sync Slicers' option. Additionally, the 'Refresh' option can be selected to update the slicers with the latest data, while the 'Visibility' option can be deselected to hide unnecessary slicers and declutter the report interface.
+
+![pbi_sync_slicers](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/f6805637-428d-4c5e-be85-104ec65d9372)
+![pbi_Filters2](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/d9fa2750-871c-4261-a712-ef5e4eb8fb86)
