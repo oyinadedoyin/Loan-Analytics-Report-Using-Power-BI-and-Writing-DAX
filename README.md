@@ -110,7 +110,7 @@ Created a star schema data model to establish table relationships between studen
 
 ![pbi_data_modelling](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/9c373804-89a5-4d55-937b-c433c10f7f66)
 
-Add Measures to Report using DAX
+### Add Measures to Report using DAX
 ---
 To enhance data analysis and visualization capabilities, measures were incorporated into the report using DAX (Data Analysis Expressions). These measures aggregate data from various columns and perform calculations across multiple tables, enabling comprehensive insights into key metrics such as total loans last year.
 
@@ -150,12 +150,16 @@ Total Days on Loan = sum(Loans[Total Days on Loan]
 **Report Header**
 ```
 Report Header 1 = "Drillthrough -" & IF(HASONEVALUE(Student[Full Name]), VALUES(Student[Full Name]),"")
+
 ```
+**Measures**
+
 ![pbi_measure_datapane](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ee84cfb1-0cb9-4ff7-843f-fba1705aed11)
 
 ![pbi_measures](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4422ce87-68a3-460b-8d2c-2dacc9da4cbc)
 
-Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan
+
+### Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan
 ---
 In this section, DAX was employed to create a new column within the Loans table, specifically aimed at calculating the total number of days each loan remained outstanding. The formula utilized for this purpose is as follows:
 
@@ -174,7 +178,7 @@ Conversely, if the 'Date Returned' column contains a date value (indicating that
 By leveraging DAX to create this calculated column, users can efficiently track and analyze the duration of loans within the Loans table, facilitating comprehensive loan management and analysis.
 
 
-Implementing Filters: Enhancing Data Exploration and User Experience
+### Implementing Filters: Enhancing Data Exploration and User Experience
 ---
 Incorporating filters into the report provides numerous benefits aimed at optimizing data exploration and improving user experience. By adding filters, users can effectively narrow down the dataset, allowing for more focused analysis and interrogation of specific data subsets. This not only streamlines the analytical process but also ensures that users only view the data relevant to their needs, minimizing cognitive load and enhancing overall comprehension.
 
