@@ -15,7 +15,8 @@
 - [Introducing a Drillthrough Page to Enhancing Report Navigation](#introducing-a-drillthrough-page-to-enhancing-report-navigation)
 - [Setting up Loan Reminder Email Column with DAX](#setting-up-loan-reminder-email-column-with-dax)
 - [Model-Driven App Navigation Column](#model-driven-app-navigation-column)
-
+- [Recommendations](#recommendations)
+- [Conclusion](#conclusion)
 
 ## Overview
 
@@ -276,5 +277,24 @@ By implementing these DAX expressions, loan reminder emails for overdue items ca
 Users can seamlessly navigate to the corresponding records in the Loans Manager Model-Driven App to make necessary changes or updates through the URL_Model_Driven column.
 
 ![pbi_modeDriven_icon](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4cd4211b-0cce-4bae-a33f-cfd3fd284076)
+
+## Recommendations 
+
+Based on the analysis conducted, here are some recommendations for enhancing the school library loan system:
+
+1. **Enhance User Communication Channels**: Explore additional communication channels such as SMS notifications or in-app alerts to ensure that students receive timely reminders about their loans. Providing multiple channels for communication increases the likelihood of users receiving and responding to notifications.
+
+2. **Offer Renewal Options**: Provide students with the ability to renew their loans online or through the library management system. This flexibility can help accommodate students who need to extend their loan periods without having to physically visit the library.
+
+3. **Promote Library Awareness**: Launch initiatives to raise awareness about the library system and its benefits among students, faculty, and parents. This could include orientation sessions for new students, promotional campaigns, or collaboration with teachers to integrate library resources into curriculum activities.
+
+4. **Provide User Education and Support**: Offer training sessions or tutorials to educate students on how to use the library management system effectively. Additionally, establish a helpdesk or support system to assist users with any questions or issues they may encounter.
+
+By implementing these recommendations, the school can enhance the efficiency, effectiveness, and user experience of its library loan system, ultimately promoting a culture of literacy, responsibility, and engagement within the school community.
+
+## Conclusion
+
+This provides a comprehensive analysis of the school's library loan system, shedding light on the intricacies of loan management and student engagement. Through the examination of loan data and user interactions, we are able to uncovered key insights into borrowing trends, overdue items, and user behaviors. The findings outlined in this report serve as a roadmap for enhancing the efficiency and effectiveness of the school library loan system. By identifying areas of improvement such as overdue item notifications and user communication channels, we can streamline loan processes and improve user satisfaction. In essence, this report underscores the importance of efficient loan management in promoting academic success and fostering a positive learning environment. 
+---
 
 Thank you for taking the time to explore this project. Your interest and attention are truly appreciated.
