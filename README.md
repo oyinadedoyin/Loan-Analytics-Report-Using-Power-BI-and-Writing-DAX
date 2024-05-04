@@ -2,12 +2,19 @@
 
 ![janko-ferlic-sfL_QOnmy00-unsplash](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/d2080578-2f16-4e6f-962f-5aee18a469e3)
 
-## Table of Contents
+### Table of Contents
 ---
 - [Overview](#overview)
 - [Report Structure](#report-structure)
 - [Key Features](#key-features)
 - [ETL Process](#etl-process)
+- [Create Date Dimension table (dimDate) using DAX](#create-date-dimension-table-dimdate-using-dax)
+- [Add Measures to Report using DAX](#add-measures-to-report-using-dax)
+- [Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan](#using-dax-to-create-a-column-in-the-loans-table-calculate-total-days-on-loan)
+- [Implementing Filters: Enhancing Data Exploration and User Experience](#implementing-filters-enhancing-data-exploration-and-user-experience)
+- [Introducing a Drillthrough Page to Enhancing Report Navigation](#introducing-a-drillthrough-page-to-enhancing-report-navigation)
+- [Setting up Loan Reminder Email Column with DAX](#setting-up-loan-reminder-email-column-with-dax)
+
 
 ### Overview
 ---
@@ -140,7 +147,7 @@ Report Header 1 = "Drillthrough -" & IF(HASONEVALUE(Student[Full Name]), VALUES(
 
 ![pbi_measures](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4422ce87-68a3-460b-8d2c-2dacc9da4cbc)
 
-Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan**
+Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan
 ---
 In this section, DAX was employed to create a new column within the Loans table, specifically aimed at calculating the total number of days each loan remained outstanding. The formula utilized for this purpose is as follows:
 
@@ -159,11 +166,11 @@ Conversely, if the 'Date Returned' column contains a date value (indicating that
 By leveraging DAX to create this calculated column, users can efficiently track and analyze the duration of loans within the Loans table, facilitating comprehensive loan management and analysis.
 
 
-**Implementing Filters: Enhancing Data Exploration and User Experience**
-
+Implementing Filters: Enhancing Data Exploration and User Experience
+---
 Incorporating filters into the report provides numerous benefits aimed at optimizing data exploration and improving user experience. By adding filters, users can effectively narrow down the dataset, allowing for more focused analysis and interrogation of specific data subsets. This not only streamlines the analytical process but also ensures that users only view the data relevant to their needs, minimizing cognitive load and enhancing overall comprehension.
 
-Key benefits of adding filters include:
+**Key benefits of adding filters include:**
 
 - **Dataset Size Reduction:** Filters enable users to refine the dataset, eliminating unnecessary data points and reducing the overall size of the dataset. This streamlined approach enhances data processing efficiency and expedites analytical workflows.
 
@@ -180,7 +187,7 @@ To implement filters effectively, I used slicers and synchronized them across mu
 ---
 The incorporation of drillthrough pages in Power BI enriches the user experience by facilitating seamless navigation from a parent record to a child record on another page. This functionality empowers users to delve deeper into specific data subsets and extract actionable insights with ease.
 
-To implement a drillthrough page, several steps were undertaken:
+**To implement a drillthrough page, several steps were undertaken:**
 
 1. **Selection of Drillthrough Fields:** The process commenced by selecting key fields, including Students Full Name, Month, School Year, and Book Name, and adding them to the 'Add drillthrough fields' section in the visualizations pane. These fields serve as pivotal elements for navigating from the parent record to the child record.
 ![pbi_drillthrough](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/0b4c89fb-8250-409d-8d8f-d7ff617b7a0e)
