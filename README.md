@@ -17,11 +17,11 @@
 
 
 ## Overview
----
+
 This project offers comprehensive insights into school library loan analytics, enabling users to manipulate data views and drill down to specific details through interactive reporting leveraging Microsoft Power BI and DAX functionalities.
 
 ## Report Structure
----
+
 The report comprises five distinct pages:
 1. **Landing Page**: Provides an overview and navigation to other sections.
 2. **Filters**: Enables users to filter information across various screens.
@@ -32,7 +32,7 @@ The report comprises five distinct pages:
   ![pbi_all_pages](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/005caaad-36c8-44c4-8062-4977b277ce2c)
 
 ## Key Features
----
+
 - **Data Source Integration**: This report seamlessly integrates data from Dataverse, sourced from our Loans Manager Model-Driven App, providing real-time insights linked directly to our report.
 - **Interactive Filters**: The Filters page empowers users to tailor data views according to specific criteria, enhancing the relevance of information displayed on other screens.
 - **Current Loans Dashboard**: Visualizes organizational loan status, highlighting overdue loans and offering customizable sliders for refining results based on the number of days overdue.
@@ -46,7 +46,7 @@ The report comprises five distinct pages:
 ![pbi_students_review](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/a3bedce1-086f-48e9-8e56-9ca0bccec4b8)
 
 ## ETL Process
----
+
 - **Data Extraction**: Utilizes Microsoft Power BI to extract data from Dataverse, importing tables for students and loans.
 - **Data Transformation**: Implements Power Query for data transformations, including data type changes, column removal, value replacements, and creation of new columns.
 - **Data Linkage**: Establishes relationships between tables, enabling seamless navigation and integration of related data, such as book names and authors.
@@ -55,8 +55,8 @@ The report comprises five distinct pages:
 ---
 ![pbi_dataTransformation_PowerQuery](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ccb4a545-f1cb-4e77-9c2e-6effb8ec8542)
 
-### Create Date Dimension table (dimDate) using DAX
----
+## Create Date Dimension table (dimDate) using DAX
+
 By creating the Date Dimension table, we can effortlessly create custom calendars tailored to our specific needs, such as the Academic Year calendar crucial for this project's context. More generally, it facilitates streamlined filtering of organization-based attributes like week numbers and half-years, enhancing the precision and efficiency of our analyses. One of the table's most significant advantages lies in its ability to support historical comparisons and trend analyses. Through its comprehensive temporal framework, we can accurately calculate metrics such as sales figures from the previous year and percentage changes year on year, empowering us with invaluable insights into business performance and trends.
 
 To format the code block for GitHub, you can use triple backticks (```) to enclose the code and specify the language after the opening triple backticks. 
@@ -108,14 +108,14 @@ This DAX code is used to create two calculated columns: "SchoolYear" and "School
 
 By using these calculated columns, this reporting can easily align with the academic calendar of the school in the UK, making it possible to track and analyze academic data or events in a manner that reflects the timing and structure of the UK academic year, from September through to August.
 
-### Data Modeling
----
+## Data Modeling
+
 Created a star schema data model to establish table relationships between student, loans, dimension date tables. Utilizing DAX, this schema ensures efficient data management and optimized query performance for enhanced reporting capabilities. All relationships are one-to-many, ensuring accurate data aggregation and analysis.
 
 ![pbi_data_modelling](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/9c373804-89a5-4d55-937b-c433c10f7f66)
 
-### Add Measures to Report using DAX
----
+## Add Measures to Report using DAX
+
 To enhance data analysis and visualization capabilities, measures were incorporated into the report using DAX (Data Analysis Expressions). These measures aggregate data from various columns and perform calculations across multiple tables, enabling comprehensive insights into key metrics such as total loans last year.
 
 Measures created within the report's visualizations include:
@@ -158,13 +158,13 @@ Report Header 1 = "Drillthrough -" & IF(HASONEVALUE(Student[Full Name]), VALUES(
 ```
 **Measures**
 ---
-![pbi_measure_datapane](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ee84cfb1-0cb9-4ff7-843f-fba1705aed11)
+![pbi_measure_datapane](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ee84cfb1-0cb9-4ff7-843f-fba1705aed11) 
 
 ![pbi_measures](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4422ce87-68a3-460b-8d2c-2dacc9da4cbc)
 
 
-### Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan
----
+## Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan
+
 In this section, DAX was employed to create a new column within the Loans table, specifically aimed at calculating the total number of days each loan remained outstanding. The formula utilized for this purpose is as follows:
 
 ```DAX
@@ -182,8 +182,8 @@ Conversely, if the 'Date Returned' column contains a date value (indicating that
 By leveraging DAX to create this calculated column, users can efficiently track and analyze the duration of loans within the Loans table, facilitating comprehensive loan management and analysis.
 
 
-### Implementing Filters: Enhancing Data Exploration and User Experience
----
+## Implementing Filters: Enhancing Data Exploration and User Experience
+
 Incorporating filters into the report provides numerous benefits aimed at optimizing data exploration and improving user experience. By adding filters, users can effectively narrow down the dataset, allowing for more focused analysis and interrogation of specific data subsets. This not only streamlines the analytical process but also ensures that users only view the data relevant to their needs, minimizing cognitive load and enhancing overall comprehension.
 
 **Key benefits of adding filters include:**
@@ -199,8 +199,8 @@ To implement filters effectively, I used slicers and synchronized them across mu
 ![pbi_sync_slicers](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/f6805637-428d-4c5e-be85-104ec65d9372)
 ![pbi_Filters2](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/d9fa2750-871c-4261-a712-ef5e4eb8fb86)
 
-### Introducing a Drillthrough Page to Enhancing Report Navigation
----
+## Introducing a Drillthrough Page to Enhancing Report Navigation
+
 The incorporation of drillthrough pages in Power BI enriches the user experience by facilitating seamless navigation from a parent record to a child record on another page. This functionality empowers users to delve deeper into specific data subsets and extract actionable insights with ease.
 
 **To implement a drillthrough page, several steps were undertaken:**
@@ -236,8 +236,8 @@ Report Header Drillthrough =
 ---
 ![pbi_drillthrough_Maria](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/78565b08-ee13-4be2-aa15-e2e6327a036a)
 
-### Setting up Loan Reminder Email Column with DAX
----
+## Setting up Loan Reminder Email Column with DAX
+
 In this section, a DAX expression was configured to generate loan reminder emails for overdue items. The DAX expression is as follows:
 
 ```DAX
