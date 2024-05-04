@@ -165,7 +165,7 @@ Report Header 1 = "Drillthrough -" & IF(HASONEVALUE(Student[Full Name]), VALUES(
 ![pbi_measures](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4422ce87-68a3-460b-8d2c-2dacc9da4cbc)
 
 
-## Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan
+## Using DAX to Create a Column in the Loans Table: Total Days on Loan
 
 In this section, DAX was employed to create a new column within the Loans table, specifically aimed at calculating the total number of days each loan remained outstanding. The formula utilized for this purpose is as follows:
 
@@ -177,16 +177,23 @@ Total Days on Loan = IF(
 )
 ```
 
+
 This DAX expression incorporates conditional logic to determine the total days on loan for each entry in the Loans table. If the 'Date Returned' column is blank (indicating that the loan is still outstanding), the formula calculates the difference between the current date (TODAY()) and the 'Date Loan Start' column, representing the total days the loan has been active.
 
 Conversely, if the 'Date Returned' column contains a date value (indicating that the loan has been returned), the formula calculates the difference between the 'Date Returned' and 'Date Loan Start' columns, representing the total duration of the loan.
 
 By leveraging DAX to create this calculated column, users can efficiently track and analyze the duration of loans within the Loans table, facilitating comprehensive loan management and analysis.
 
+![pbi_totaldaysonloan](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ceefd010-f861-4d77-ba22-1d5e0512dd65)
+
 
 ## Implementing Filters: Enhancing Data Exploration and User Experience
 
 Incorporating filters into the report provides numerous benefits aimed at optimizing data exploration and improving user experience. By adding filters, users can effectively narrow down the dataset, allowing for more focused analysis and interrogation of specific data subsets. This not only streamlines the analytical process but also ensures that users only view the data relevant to their needs, minimizing cognitive load and enhancing overall comprehension.
+
+
+![pbi_YukiSato](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/a87fc2f8-46d3-44d7-92ea-f3c594f2402c)
+
 
 **Key benefits of adding filters include:**
 
