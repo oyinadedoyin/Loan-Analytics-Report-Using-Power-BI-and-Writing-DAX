@@ -46,8 +46,7 @@ The report comprises five distinct pages:
 ---
 By creating the Date Dimension table, we can effortlessly create custom calendars tailored to our specific needs, such as the Academic Year calendar crucial for this project's context. More generally, it facilitates streamlined filtering of organization-based attributes like week numbers and half-years, enhancing the precision and efficiency of our analyses. One of the table's most significant advantages lies in its ability to support historical comparisons and trend analyses. Through its comprehensive temporal framework, we can accurately calculate metrics such as sales figures from the previous year and percentage changes year on year, empowering us with invaluable insights into business performance and trends.
 
-To format the code block for GitHub, you can use triple backticks (```) to enclose the code and specify the language after the opening triple backticks. Here's your code formatted for GitHub:
-
+To format the code block for GitHub, you can use triple backticks (```) to enclose the code and specify the language after the opening triple backticks. 
 ```DAX
 dimDate = ADDCOLUMNS(
     CALENDARAUTO(),
