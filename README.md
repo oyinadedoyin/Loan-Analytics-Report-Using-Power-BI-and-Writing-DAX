@@ -277,4 +277,4 @@ Users can seamlessly navigate to the corresponding records in the Loans Manager 
 
 ![pbi_modeDriven_icon](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/4cd4211b-0cce-4bae-a33f-cfd3fd284076)
 
-
+Thank you for taking the time to explore this project. Your interest and attention are truly appreciated.
