@@ -47,29 +47,31 @@ The report comprises five distinct pages:
 By creating the Date Dimension table, we can effortlessly create custom calendars tailored to our specific needs, such as the Academic Year calendar crucial for this project's context. More generally, it facilitates streamlined filtering of organization-based attributes like week numbers and half-years, enhancing the precision and efficiency of our analyses. One of the table's most significant advantages lies in its ability to support historical comparisons and trend analyses. Through its comprehensive temporal framework, we can accurately calculate metrics such as sales figures from the previous year and percentage changes year on year, empowering us with invaluable insights into business performance and trends.
 
 To format the code block for GitHub, you can use triple backticks (```) to enclose the code and specify the language after the opening triple backticks. 
+
 ```DAX
-dimDate = ADDCOLUMNS(
-    CALENDARAUTO(),
-    "MonthID", MONTH([Date]),
-    "Month", FORMAT([Date], "MMM"),
-    "DayNumber", DAY([Date]),
-    "DayName", FORMAT([Date], "dddd"),
-    "DayID", WEEKDAY([Date], 2),
-    "Year", YEAR([Date]),
-    "Today", TODAY(),
-    // Add a SchoolYear column that adjusts the year based on the month
-    "SchoolYear", IF(
-        MONTH([Date]) >= 9,
-        YEAR([Date])+1,
-        YEAR([Date])
-    ),
-    "SchoolMonthID", IF(
-        MONTH([Date]) >= 9,
-        MONTH([Date])-9,
-        MONTH([Date])+3
-    ),
-    "Report Refresh", NOW() // We'll use this to display the report refresh date
-)
+dimDate = 
+    ADDCOLUMNS(
+        CALENDARAUTO(),
+        "MonthID", MONTH([Date]),
+        "Month", FORMAT([Date], "MMM"),
+        "DayNumber", DAY([Date]),
+        "DayName", FORMAT([Date], "dddd"),
+        "DayID", WEEKDAY([Date], 2),
+        "Year", YEAR([Date]),
+        "Today", TODAY(),
+        // Add a SchoolYear column that adjusts the year based on the month
+        "SchoolYear", IF(
+            MONTH([Date]) >= 9,
+            YEAR([Date])+1,
+            YEAR([Date])
+        ),
+        "SchoolMonthID", IF(
+            MONTH([Date]) >= 9,
+            MONTH([Date])-9,
+            MONTH([Date])+3
+        ),
+        "Report Refresh", NOW() // We'll use this to display the report refresh date
+    )
 ```
 
 This DAX code is used to create two calculated columns: "SchoolYear" and "SchoolMonthID", based on a given date column `[Date]`.
@@ -110,29 +112,29 @@ To create the first measure - Total loans, right click on the my measures table 
 ```
 Total Loans = COUNTROWS(Loans)
 ```
-Total Overdue Loans
+**Total Overdue Loans**
 ```
 Total Overdue Loans = CALCULATE([Total Loans], Loans[pu_isoverdue] = true() )
 ```
-Total Loans Last Year (LY)
+**Total Loans Last Year (LY)**
 ```
 Total Loans LY = Calculate ([Total Loans], SAMEPERIODLASTYEAR(dimDate[Date]))
 ```
-Change Year on Year (YOY)
+**Change Year on Year (YOY)**
 ```
 Change YOY = [Total Loans] - [Total Loans LY]
 ```
-Percentage Change Year on Year 
+**Percentage Change Year on Year**
 ```
 % Change YOY = Divide (Change YOY], [Total Loans LY])
 ```
-Total Days on Loan
+**Total Days on Loan**
 ```
 Total Days on Loan = sum(Loans[Total Days on Loan]
 ```
-Report Header
+**Report Header**
 ```
-Report Header 1 = "Loans Reporting -" & IF(HASONEVALUE(Student[Full Name]), VALUES(Student[Full Name]),"")
+Report Header 1 = "Drillthrough -" & IF(HASONEVALUE(Student[Full Name]), VALUES(Student[Full Name]),"")
 ```
 ![pbi_measure_datapane](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/ee84cfb1-0cb9-4ff7-843f-fba1705aed11)
 
