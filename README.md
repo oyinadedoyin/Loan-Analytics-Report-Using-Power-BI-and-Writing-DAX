@@ -21,7 +21,7 @@
 
 ## Overview
 
-This project offers comprehensive insights into school library loan analytics, enabling users to manipulate data views and drill down to specific details through interactive reporting leveraging Microsoft Power BI and DAX functionalities.
+This project offers comprehensive insights into a school's library loan analytics, enabling users to manipulate data views and drill down to specific details through interactive reporting leveraging Microsoft Power BI and DAX functionalities.
 
 ## Tools
 
