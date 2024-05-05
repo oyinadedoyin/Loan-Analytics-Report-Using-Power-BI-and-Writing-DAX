@@ -40,7 +40,7 @@ The report comprises five distinct pages:
 
 ## Key Features
 
-- **Data Source Integration**: This report seamlessly integrates data from Dataverse, sourced from our Loans Manager Model-Driven App, providing real-time insights linked directly to our report.
+- **Data Source Integration**: This report seamlessly integrates data from Dataverse, sourced from a Model-Driven App, providing real-time insights linked directly to our report.
 - **Interactive Filters**: The Filters page empowers users to tailor data views according to specific criteria, enhancing the relevance of information displayed on other screens.
 - **Current Loans Dashboard**: Visualizes organizational loan status, highlighting overdue loans and offering customizable sliders for refining results based on the number of days overdue.
 - **Students Review**: Compares loan statistics year-over-year, providing valuable insights into loan trends and student borrowing behavior.
