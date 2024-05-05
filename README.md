@@ -130,7 +130,7 @@ Measures created within the report's visualizations include:
 - **Percentage change year on year**
 - **Dynamic report header** (a text-based measure)
 
-While measures can be created within existing tables in the report, such as the students table, a separate table named 'My Measures' was created for ease of management. This approach simplifies measure creation and organization. To accomplish this, an empty table named 'My Measures' was generated using the 'Enter Data' option from the Home tab, providing a centralized location for managing and accessing all measures within the report.
+While measures can be created within existing tables in the report, such as the students table, a separate table named 'My Measures' was created for ease of management. This approach simplifies measure creation and organization. To accomplish this, an empty table named 'My Measures' was generated using the 'Enter Data' option from the Home tab.
 
 To create the first measure - Total loans, right click on the my measures table table and select new measure.
 ```
