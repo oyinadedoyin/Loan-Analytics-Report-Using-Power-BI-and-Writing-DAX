@@ -117,7 +117,7 @@ By using these calculated columns, this reporting can easily align with the acad
 
 ## Data Modeling
 
-Created a star schema data model to establish table relationships between student, loans, dimension date tables. Utilizing DAX, this schema ensures efficient data management and optimized query performance for enhanced reporting capabilities. All relationships are one-to-many, ensuring accurate data aggregation and analysis.
+Created a star schema data model to establish table relationships between student, loans, dimension date tables. This schema ensures efficient data management and optimized query performance for enhanced reporting capabilities. All relationships are one-to-many, ensuring accurate data aggregation and analysis.
 
 ![pbi_data_modelling](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/9c373804-89a5-4d55-937b-c433c10f7f66)
 
