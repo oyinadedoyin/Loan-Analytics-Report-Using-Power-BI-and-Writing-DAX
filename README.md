@@ -111,7 +111,7 @@ This DAX code is used to create two calculated columns: "SchoolYear" and "School
 ![pbi_dimDate_table2](https://github.com/oyinadedoyin/Loan-Analytics-Report-Using-Power-BI-and-Writing-DAX/assets/44920093/fd65bf97-5b7c-42a9-95a9-768cadddaaa6)
 
 
-By using these calculated columns, this reporting can easily align with the academic calendar of the school in the UK, making it possible to track and analyze academic data or events in a manner that reflects the timing and structure of the UK academic year, from September through to August.
+By using these calculated columns, this reporting can easily align with the academic calendar of the school in the UK, making it possible to track and analyze academic data or events in a manner that reflects the timing and structure of the UK academic year, which runs from September through to August.
 
 ## Data Modeling
 
