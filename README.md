@@ -11,7 +11,7 @@
 - [ETL Process](#etl-process)
 - [Create Date Dimension table (dimDate) using DAX](#create-date-dimension-table-dimdate-using-dax)
 - [Add Measures to Report using DAX](#add-measures-to-report-using-dax)
-- [Using DAX to Create a Column in the Loans Table: Calculate Total Days on Loan](#using-dax-to-create-a-column-in-the-loans-table-calculate-total-days-on-loan)
+- [Using DAX to Create a Column in the Loans Table: Total Days on Loan](#using-dax-to-create-a-column-in-the-loans-table-total-days-on-loan)
 - [Implementing Filters: Enhancing Data Exploration and User Experience](#implementing-filters-enhancing-data-exploration-and-user-experience)
 - [Introducing a Drillthrough Page to Enhancing Report Navigation](#introducing-a-drillthrough-page-to-enhancing-report-navigation)
 - [Setting up Loan Reminder Email Column with DAX](#setting-up-loan-reminder-email-column-with-dax)
