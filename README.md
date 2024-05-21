@@ -25,7 +25,7 @@ This project offers comprehensive insights into a school's library loan analytic
 
 ## Tools
 
-Microsoft Power BI, Power Query, Power Apps (Model-Driven) App, Power Automate
+Microsoft Power BI, Power Query, Power Apps (Model-Driven App), Power Automate
 
 ## Report Structure
 
