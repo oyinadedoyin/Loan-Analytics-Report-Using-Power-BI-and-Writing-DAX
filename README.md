@@ -56,7 +56,7 @@ The report comprises five distinct pages:
 
 - **Data Extraction**: Utilizes Microsoft Power BI to extract data from Dataverse, importing tables for students and loans.
 - **Data Transformation**: Implements Power Query for data transformations, including data type changes, column removal, value replacements, and creation of new columns.
-- **Data Linkage**: Establishes relationships between tables, enabling seamless navigation and integration of related data, such as book names and authors.
+- **Data Loading**: Loading the transformed data into Microsoft Power BI for visualization and analysis, enabling users to manipulate data views and drill down to specific details through interactive reporting.
 
 **Data Transformation in Power Query**
 ---
